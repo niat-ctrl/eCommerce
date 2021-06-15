@@ -5,6 +5,7 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 {% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +19,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
-<link href="{% static 'css/bootstrap.css' %}"" rel='stylesheet' type='text/css' />
+<link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
 <link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' />
 <!-- js -->
@@ -215,6 +216,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			<h3>Welcome To.....!</h3>	
 			<div class="search-form">
 				<form action="#" method="post">
+					{% csrf_token %}
 					<input type="text" placeholder="Search..." name="Search...">
 					<input type="submit" value=" " >
 				</form>
@@ -222,9 +224,10 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		</div>	
     </div>
 </div>
+    <!--<script>window.jQuery || document.write('<script src= "{% static 'js/vendor/jquery-1.11.1.min.js' %}"> <\/script>')</script>-->
+    <!--<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>-->
+		<!--<script src="{% static 'js/jquery.vide.min.js' %}"></script>-->
 
-    <script>window.jQuery || document.write('<script src= "js/jquery-1.11.1.min.js" ><\/script>')</script>
-    <script src="{% static 'js/jquery.vide.min.js' %}"></script>
 <!--content-->
 <div class="content-top ">
 	<div class="container ">
@@ -349,7 +352,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<div class="col-md-3 m-wthree">
 								<div class="col-m">
 									<a href="#" data-toggle="modal" data-target="#myModal5" class="offer-img">
-										<img src="{% static 'images/of4.png' %} class="img-responsive" alt="">
+										<img src="{% static 'images/of4.png' %}" class="img-responsive" alt="">
 										<div class="offer"><p><span>Offer</span></p></div>
 									</a>
 									<div class="mid-1">
